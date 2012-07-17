@@ -9,7 +9,6 @@ Status: Not Tested!
 
 DEV Change Log
 ==============
-
 [Version 1.0]
  - Created Initial source.
  - Added messageBox class.

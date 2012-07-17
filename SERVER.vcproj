@@ -178,6 +178,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\configReader.cpp"
+					>
+				</File>
+				<File
 					RelativePath=".\messageBox.cpp"
 					>
 				</File>
@@ -199,6 +203,10 @@
 				>
 				<File
 					RelativePath=".\application.h"
+					>
+				</File>
+				<File
+					RelativePath=".\configReader.h"
 					>
 				</File>
 				<File

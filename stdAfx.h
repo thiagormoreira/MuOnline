@@ -8,6 +8,9 @@
 @(#)Product:        Mu Online Plugin Season 4
 @(#)Web:			https://github.com/KristiansJaunzems/MuOnline
 /********************************************************************************/
+
+#define _CRT_SECURE_NO_WARNINGS
+
 #include <Windows.h>
 #include <process.h>
 #include <Stdio.h>
@@ -23,3 +26,4 @@
 #include "main.h"
 #include "messageBox.h"
 #include "application.h"
+#include "configReader.h"
