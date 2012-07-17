@@ -20,5 +20,6 @@
 #include <rpc.h>
 #include <rpcdce.h>
 
-#include "Main.h"
+#include "main.h"
 #include "messageBox.h"
+#include "application.h"

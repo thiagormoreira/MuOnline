@@ -13,14 +13,15 @@
 extern "C" __declspec (dllexport) void __cdecl initPlugin(){
 	DWORD oldProtect;
 	if(VirtualProtect(LPVOID(0x401000),3543191,PAGE_EXECUTE_READWRITE,&oldProtect)){
-		// TODO: Add Plugin loading points
+		// TODO: Add loading procedures
 	}
 	else{
 		if(messageBox.Show(messageBox.yesNo,"Plugin Init Problems","GameServer 'WzAG.dll' load error!\nDo you wan't to restart gameserver?") == messageBox.yes){
-			// TODO: Add GameServer restart code
+			myApplication.Restart();
+			myApplication.Exit();
 		}
 		else{
-			ExitProcess(0);
+			myApplication.Exit();
 		}
 	}
 }

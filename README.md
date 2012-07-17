@@ -3,6 +3,9 @@ MuOnline
 
 Mu Online Season 4 Episode 1
 
+Overral
+=======
+Status: Not Tested!
 
 DEV Change Log
 ==============
@@ -19,6 +22,13 @@ DEV Change Log
 	 	- messageBox.yes				; Message box return variable
 	 	- messageBox.no					; message box return variable
  - Added main plugin entry point.
+[Version 1.1]
+ - Added application class
+	- Information
+		- Manages gameserver.exe process
+	- Functions & Variables
+		- myApplication.Restart();	; Restarts gameserver process
+		- myApplication.Exit();		; Closes gameserver process
 
 USR Change Log
 ==============

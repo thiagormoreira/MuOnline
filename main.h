@@ -8,3 +8,5 @@
 @(#)Product:        Mu Online Plugin Season 4
 @(#)Web:			https://github.com/KristiansJaunzems/MuOnline
 /********************************************************************************/
+
+#define DEBUG_LOG 0 // 0: Disable All, 1: Minimal, 2: Full

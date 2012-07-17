@@ -166,9 +166,17 @@
 				RelativePath=".\main.cpp"
 				>
 			</File>
+			<File
+				RelativePath=".\README.md"
+				>
+			</File>
 			<Filter
 				Name="miscellaneous"
 				>
+				<File
+					RelativePath=".\application.cpp"
+					>
+				</File>
 				<File
 					RelativePath=".\messageBox.cpp"
 					>
@@ -189,6 +197,10 @@
 			<Filter
 				Name="miscellaneous"
 				>
+				<File
+					RelativePath=".\application.h"
+					>
+				</File>
 				<File
 					RelativePath=".\messageBox.h"
 					>
