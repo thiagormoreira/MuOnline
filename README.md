@@ -6,6 +6,7 @@ Mu Online Season 4 Episode 1
 Overral
 =======
 Status: Not Tested!
+Current Version: 1.1
 
 DEV Change Log
 ==============
@@ -21,6 +22,7 @@ DEV Change Log
 	 	- messageBox.yes				; Message box return variable
 	 	- messageBox.no					; message box return variable
  - Added main plugin entry point.
+
 [Version 1.1]
  - Added application class
 	- Information
