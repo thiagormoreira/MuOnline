@@ -25,9 +25,16 @@ DEV Change Log
  - Added application class
 	- Information
 		- Manages gameserver.exe process
-	- Functions & Variables
+	- Functions
 		- myApplication.Restart();	; Restarts gameserver process
 		- myApplication.Exit();		; Closes gameserver process
+- Added configreader class
+	- Information
+		- Read and stores data file information
+	- Functions
+		- configReader.Read(selection,variable,minValue,maxValue,defaultValue,fileName);
+		- configReader.Read(selection,variable,defaultValue,fileName);
+		- Read(char* selection, char* variable, char* fileName);
 
 USR Change Log
 ==============
