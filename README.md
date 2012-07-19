@@ -36,7 +36,24 @@ DEV Change Log
 	- Functions
 		- configReader.Read(selection,variable,minValue,maxValue,defaultValue,fileName);
 		- configReader.Read(selection,variable,defaultValue,fileName);
-		- Read(char* selection, char* variable, char* fileName);
+		- configReader.Read(selection,variable,fileName);
+
+[Version 1.2]
+ - Update configreader class
+   - Functions
+		- configReader.fileChecker();
+		
+[Version 1.3]
+ - Updated application class
+   - Functions
+     - myApplications.writeLog(Message);
+ - Added memorywriter class
+   - Functions
+	 - memoryWriter.hookThis(funcOffset,jmpOffset);
+	 - memoryWriter.setNop(offset,size);
+	 - memoryWriter.setRetn(offset);
+	 - memoryWriter.setByte(offset,value);
+ - Other minjor source changes.
 
 USR Change Log
 ==============

@@ -16,7 +16,7 @@ extern "C" __declspec (dllexport) void __cdecl initPlugin(){
 		// TODO: Add loading procedures
 	}
 	else{
-		if(messageBox.Show(messageBox.yesNo,"Plugin Init Problems","GameServer 'WzAG.dll' load error!\nDo you wan't to restart gameserver?") == messageBox.yes){
+		if(messageBox.Show(messageBox.typeYesNo,"Plugin Init Problems","GameServer 'WzAG.dll' load error!\nDo you wan't to restart gameserver?") == messageBox.returnYes){
 			myApplication.Restart();
 			myApplication.Exit();
 		}

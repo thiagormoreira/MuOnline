@@ -111,6 +111,7 @@
 				EnableIntrinsicFunctions="true"
 				RuntimeLibrary="2"
 				EnableFunctionLevelLinking="true"
+				GenerateXMLDocumentationFiles="false"
 				WarningLevel="3"
 				DebugInformationFormat="3"
 			/>
@@ -174,15 +175,19 @@
 				Name="miscellaneous"
 				>
 				<File
-					RelativePath=".\application.cpp"
-					>
-				</File>
-				<File
 					RelativePath=".\configReader.cpp"
 					>
 				</File>
 				<File
+					RelativePath=".\memoryWriter.cpp"
+					>
+				</File>
+				<File
 					RelativePath=".\messageBox.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\myApplication.cpp"
 					>
 				</File>
 				<File
@@ -202,15 +207,19 @@
 				Name="miscellaneous"
 				>
 				<File
-					RelativePath=".\application.h"
-					>
-				</File>
-				<File
 					RelativePath=".\configReader.h"
 					>
 				</File>
 				<File
+					RelativePath=".\memoryWriter.h"
+					>
+				</File>
+				<File
 					RelativePath=".\messageBox.h"
+					>
+				</File>
+				<File
+					RelativePath=".\myApplication.h"
 					>
 				</File>
 				<File

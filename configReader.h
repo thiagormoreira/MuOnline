@@ -13,6 +13,9 @@ class configreader
 {
 private:
 	char File[100];
+	char fileLists[4][100];
+	int currentFileListCount;
+	bool error;
 public:
 
 	struct configuration
@@ -22,9 +25,15 @@ public:
 		int gameServerLogSave;	// 0: Disabled, 1: Enabled
 	}Configuration;
 
+	///
+	///
+
 	int Read(char* selection, char* variable, short minValue, short maxValue, int defaultValue, char* fileName);
 	int Read(char* selection, char* variable,int defaultValue, char* fileName);
 	int Read(char* selection, char* variable, char* fileName);
+
+	void fileChecker();
+	bool fileExist(char* fileName);
 };
 
 extern configreader configReader;

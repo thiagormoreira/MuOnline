@@ -25,5 +25,6 @@
 
 #include "main.h"
 #include "messageBox.h"
-#include "application.h"
+#include "myApplication.h"
 #include "configReader.h"
+#include "memoryWriter.h"

@@ -20,7 +20,7 @@ void application::Restart(){
     si.cb = sizeof(si);
 
 	if(!CreateProcess("gameserver.exe",0,NULL,NULL,FALSE,0,NULL,NULL,&si,&pi)){
-      messageBox.Show(messageBox.normal,"GameServer Restart","Restart has failed, application will now close!");
+      messageBox.Show(messageBox.typeNormal,"GameServer Restart","Restart has failed, application will now close!");
 	  this->Exit();
     }
 }
@@ -28,6 +28,17 @@ void application::Restart(){
 void application::Exit(){
 	// TODO: Add data saving procedure
 	ExitProcess(0);
+}
+
+void application::writeLog(char *Message){
+	SYSTEMTIME time;
+	GetLocalTime(&time);
+
+	sprintf(fileName,".\\Log\\Console(%02d.%02d.%02d).log", time.wDay, time.wMonth, time.wYear);
+
+	FILE *logFile = fopen(fileName,"a+");
+	fputs(Message,logFile);
+	fclose(logFile);
 }
 
 extern application myApplication;

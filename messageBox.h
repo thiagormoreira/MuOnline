@@ -13,13 +13,13 @@ class messagebox
 {
 public:
 	enum msgType{
-		normal = MB_OK, 
-		yesNo = MB_YESNO
+		typeNormal = MB_OK, 
+		typeYesNo = MB_YESNO
 	};
 
 	enum msgReturn{
-		yes = 6,
-		no = 7
+		returnYes = 6,
+		returnNo = 7
 	};
 
 	int Show(msgType type, char* title, char* message);
