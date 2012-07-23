@@ -6,9 +6,10 @@ Mu Online Season 4 Episode 1
 Overral
 =======
 Status: Not Tested!
-Current Version: 1.1
 
-DEV Change Log
+Current Version: 2.1
+
+Development Change Log
 ==============
 [Version 1.0]
  - Created Initial source.
@@ -16,9 +17,9 @@ DEV Change Log
 	- Information
 		- Function returns button events: yes, no.
 	- Function & Variables
-	 	- messageBox.Show(Type, Title, Message);	; Displays the message box
-	 	- messageBox.yesNo				; Message box type variable
-	 	- messageBox.normal				; Message box type variable
+	 	- messageBox.Show(Type, Title, Message);
+	 	- messageBox.yesNo
+	 	- messageBox.normal	
 	 	- messageBox.yes				; Message box return variable
 	 	- messageBox.no					; message box return variable
  - Added main plugin entry point.
@@ -55,6 +56,12 @@ DEV Change Log
 	 - memoryWriter.setByte(offset,value);
  - Other minjor source changes.
 
-USR Change Log
+Game Change Log
 ==============
-[Version 1]
+[Version 1.0]
+ - Added gameserver checksum switch
+ - Added gameserver debug log options
+	- Log display level
+	- Log write to file
+ - Added gameserver personal id switch
+ - Added gameserver pvp or nonpvp switch

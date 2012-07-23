@@ -20,9 +20,13 @@ public:
 
 	struct configuration
 	{
-		int debugLogLevel;		// 0: None, 1: Minimal, 2: Full
-		int debugLogSave;		// 0: Disabled, 1: Enabled
-		int gameServerLogSave;	// 0: Disabled, 1: Enabled
+		short debugLogLevel;		// 0: None, 1: Minimal, 2: Full
+		short debugLogSave;			// 0: Disabled, 1: Enabled
+		short gameServerLogSave;	// 0: Disabled, 1: Enabled
+		short gameServerChecksum;	// 0: Disabled, 1: Enabled
+		short gameServerPersonalID;	// 0: Disabled, 1: Enabled
+		short gameServerPVP;		// 0: Disabled, 1: Enabled
+
 	}Configuration;
 
 	///

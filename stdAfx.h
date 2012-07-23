@@ -28,3 +28,4 @@
 #include "myApplication.h"
 #include "configReader.h"
 #include "memoryWriter.h"
+#include "fixes.h"

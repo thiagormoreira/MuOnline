@@ -2,7 +2,7 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9.00"
-	Name="WzAG"
+	Name="GameServer"
 	ProjectGUID="{85876F46-471C-404D-9DFC-008A233962B6}"
 	RootNamespace="APMSoftware"
 	TargetFrameworkVersion="196613"
@@ -84,8 +84,8 @@
 		</Configuration>
 		<Configuration
 			Name="Release|Win32"
-			OutputDirectory="$(SolutionDir)\$(ConfigurationName)\Server"
-			IntermediateDirectory="$(ConfigurationName)\Server"
+			OutputDirectory="$(SolutionDir)\Build"
+			IntermediateDirectory="$(SolutionDir)\Build"
 			ConfigurationType="2"
 			CharacterSet="2"
 			WholeProgramOptimization="0"
@@ -126,7 +126,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				OutputFile="$(SolutionDir)\BUILD\Server\GameServer.dll"
+				OutputFile="$(SolutionDir)\Build\Compiled\GameServer.dll"
 				GenerateDebugInformation="true"
 				OptimizeReferences="2"
 				EnableCOMDATFolding="2"
@@ -195,6 +195,14 @@
 					>
 				</File>
 			</Filter>
+			<Filter
+				Name="gameserver"
+				>
+				<File
+					RelativePath=".\fixes.cpp"
+					>
+				</File>
+			</Filter>
 		</Filter>
 		<Filter
 			Name="Header Files"
@@ -224,6 +232,14 @@
 				</File>
 				<File
 					RelativePath=".\stdAfx.h"
+					>
+				</File>
+			</Filter>
+			<Filter
+				Name="gameserver"
+				>
+				<File
+					RelativePath=".\fixes.h"
 					>
 				</File>
 			</Filter>
