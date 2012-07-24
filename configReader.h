@@ -26,6 +26,7 @@ public:
 		short gameServerChecksum;	// 0: Disabled, 1: Enabled
 		short gameServerPersonalID;	// 0: Disabled, 1: Enabled
 		short gameServerPVP;		// 0: Disabled, 1: Enabled
+		short gameServerCrashdump;	// 0: Disabled, 1: Enabled
 
 	}Configuration;
 

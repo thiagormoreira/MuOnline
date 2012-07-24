@@ -1,13 +1,16 @@
-MuOnline
+GameServer X Project
 ========
 
-Mu Online Season 4 Episode 1
+Multi functional server addon for 1.00.18 and 1.00.90 gameserver series. 
+The gameserver x project currently support two gameserver versions but more versions will be supported soon.
+Development for support 1.00.60 and 1.00.16 has been started. The castle siege version will come latter.
+Functional server file are under development and will be released asap, in mean time you can use any other 1.00.90 and 1.00.18 server files for testing.
 
 Overral
 =======
 Status: Not Tested!
 
-Current Version: 2.1
+Current Version: 2.2
 
 Development Change Log
 ==============
@@ -65,3 +68,9 @@ Game Change Log
 	- Log write to file
  - Added gameserver personal id switch
  - Added gameserver pvp or nonpvp switch
+[Version 1.1]
+ - Added support for theese gameservers
+	- 1.00.90 Common and Siege
+	- 1.00.18 Common and Siege
+ - Added gameserver crashdump generation switch
+ - Added many fixes
