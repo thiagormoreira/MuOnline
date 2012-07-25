@@ -210,6 +210,10 @@
 					RelativePath=".\gameServer.cpp"
 					>
 				</File>
+				<File
+					RelativePath=".\protocol.cpp"
+					>
+				</File>
 			</Filter>
 		</Filter>
 		<Filter
@@ -252,6 +256,10 @@
 				</File>
 				<File
 					RelativePath=".\gameServer.h"
+					>
+				</File>
+				<File
+					RelativePath=".\protocol.h"
 					>
 				</File>
 			</Filter>

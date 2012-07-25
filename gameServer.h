@@ -31,12 +31,15 @@
 	#define GAMESERVER_OBJECT_MIN					0x1F40
 	#define GAMESERVER_OBJECT_MAX					0x2328
 	#define GAMESERVER_OBJECT_MAXUSER				(GAMESERVER_OBJECT_MAX-GAMESERVER_OBJECT_MIN)
-	#define GAMESERVER_OBJECT_POINTER(aIndex)		((aIndex * OBJECT_SIZE) + OBJECT_BASE)
+	#define GAMESERVER_OBJECT_POINTER(aIndex)		((aIndex * GAMESERVER_OBJECT_SIZE) + GAMESERVER_OBJECT_BASE)
 
 	#define GAMESERVER_GC_SERVER_MSG_STRING_SEND	0x004066B3
 	#define GAMESERVER_CLOSE_CLIENT					0x0040788D
 	#define GAMESERVER_ITEM_SERIAL_CREATE_SEND		0x00407004
 	#define GAMESERVER_DATA_SEND					0x004B3370
+	#define GAMESERVER_DATA_RECV					0x004368E0
+	
+	#define GAMESERVER_PROTOCOL_CORE_HOOK			0x004038BE
 
 	#pragma message (" Compile > [GameServer] Version: 1.00.90 / Type: Common")
 #endif
@@ -60,12 +63,15 @@
 	#define GAMESERVER_OBJECT_MIN					0x1900
 	#define GAMESERVER_OBJECT_MAX					0x1CE8
 	#define GAMESERVER_OBJECT_MAXUSER				(GAMESERVER_OBJECT_MAX-GAMESERVER_OBJECT_MIN)
-	#define GAMESERVER_OBJECT_POINTER(aIndex)		((aIndex * OBJECT_SIZE) + OBJECT_BASE)
+	#define GAMESERVER_OBJECT_POINTER(aIndex)		((aIndex * GAMESERVER_OBJECT_SIZE) + GAMESERVER_OBJECT_BASE)
 
 	#define GAMESERVER_GC_SERVER_MSG_STRING_SEND	0x004066E0
 	#define GAMESERVER_CLOSE_CLIENT					0x00401046
 	#define GAMESERVER_ITEM_SERIAL_CREATE_SEND		0x004036F7
 	#define GAMESERVER_DATA_SEND					0x0048BEF0
+	#define GAMESERVER_DATA_RECV					0x0042FCB0
+
+	#define GAMESERVER_PROTOCOL_CORE_HOOK			(0x004036AC+5)
 
 	#pragma message (" Compile > [GameServer] Version: 1.00.18 / Type: Common")
 #endif
@@ -74,10 +80,10 @@
 #define DEC_FUNC(f,n,o)		f n = (f) o
 
 SET_FUNC(void,GCServerMsgStringSend,(char* message,DWORD aIndex,BYTE type), sendPlayerMessage);
-SET_FUNC(void,CloseClient,(DWORD aIndex),PlayerDisconnect);
+SET_FUNC(void,CloseClient,(DWORD aIndex),playerDisconnect);
 SET_FUNC(void,ItemSerialCreateSend,(int aIndex, BYTE mapNumber, BYTE x, BYTE y, int type, BYTE level, BYTE dur, BYTE Op1, BYTE Op2, BYTE Op3, int lootIndex, BYTE NewOption, BYTE SetOption),playerItemSend);
 SET_FUNC(void,DataSend,(DWORD PlayerID,PBYTE Packet,DWORD Size),dataSend);
-
+SET_FUNC(void,DataRecv,(BYTE,PBYTE,DWORD,DWORD,...),dataRecv);
 #pragma region Under Development: 1.00.18 Siege, 1.00.90 Siege
 #if GAMESERVER_VERSION == 1 && GAMESERVER_TYPE == 1				// GameServer 1.00.18, Type Siege
 	#error "GameServer 1.00.18, Type Siege not supported yet!" 

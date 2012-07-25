@@ -1,0 +1,1 @@
+void ProtocolCoreEx(BYTE protoNum, LPBYTE aRecv, DWORD aLen, DWORD aIndex, DWORD Encrypt, int Serial);

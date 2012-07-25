@@ -30,3 +30,4 @@
 #include "memoryWriter.h"
 #include "fixes.h"
 #include "gameServer.h"
+#include "protocol.h"
