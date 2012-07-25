@@ -164,6 +164,10 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
+				RelativePath=".\Change Log.txt"
+				>
+			</File>
+			<File
 				RelativePath=".\main.cpp"
 				>
 			</File>
@@ -200,6 +204,10 @@
 				>
 				<File
 					RelativePath=".\fixes.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\gameServer.cpp"
 					>
 				</File>
 			</Filter>
@@ -240,6 +248,10 @@
 				>
 				<File
 					RelativePath=".\fixes.h"
+					>
+				</File>
+				<File
+					RelativePath=".\gameServer.h"
 					>
 				</File>
 			</Filter>

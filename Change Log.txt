@@ -1,0 +1,37 @@
+Game Server X Project Change Log
+
+SOURCE
+
+[ Version 1.0 ]
+ - Created Initial source code.
+ - Added new function classes.
+	- configReader	: Reads gameserver configuration files
+	- messageBox	: Shows costum message box window
+[ Version 1.1 ]
+ - Added new function classes.
+	- myApplication	: Manages gameserver process
+ - Updated function classes.
+[ Version 1.2 ]
+ - Added new function classes.
+	- memoryWriter	: Writes gameserver process memory
+[ Version 1.3 ]
+ - Added support for multiple gameserver versions.
+	- GameServer 1.00.90 > Season 4
+	- GameServer 1.00.18 > Season 2
+ - Minjor source changes
+ 
+GAMESERVER
+
+===============================================================================================
+[			NOTE				]		[        VERSION        ]		[         TYPE        ]
+===============================================================================================
+[ Version 1.0 ]
+ - Added basic gameserver fixes.
+	- Checksum Disable						[1.00.18/1.00.90]					[COMMON]
+	- Remove M Drive							[1.00.18]						[COMMON]
+	- Socket Serial							[1.00.18/1.00.90]					[COMMON]
+	- Destroy gioCP							[1.00.18/1.00.90]					[COMMON]
+	- Serial 0x0000000						[1.00.18/1.00.90]					[COMMON]
+	- Hack Tool Disconnect						[1.00.18]						[COMMON]
+
+CURRENT VERSION: 2.3

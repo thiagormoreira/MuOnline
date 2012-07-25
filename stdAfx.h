@@ -5,7 +5,7 @@
 
 @(#)Author:         Kristians Jaunzems
 @(#)Copyright:      (C) Titanium Software 2012
-@(#)Product:        Mu Online Plugin Season 4
+@(#)Product:        GameServer X Project
 @(#)Web:			https://github.com/KristiansJaunzems/MuOnline
 /********************************************************************************/
 
@@ -29,3 +29,4 @@
 #include "configReader.h"
 #include "memoryWriter.h"
 #include "fixes.h"
+#include "gameServer.h"

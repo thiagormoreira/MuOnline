@@ -5,7 +5,7 @@
 
 @(#)Author:         Kristians Jaunzems
 @(#)Copyright:      (C) Titanium Software 2012
-@(#)Product:        Mu Online Plugin Season 4
+@(#)Product:        GameServer X Project
 @(#)Web:			https://github.com/KristiansJaunzems/MuOnline
 /********************************************************************************/
 
@@ -17,7 +17,7 @@
 //	1.00.90 > 0
 //  1.00.18 > 1
 //==================================================================================
-#define GAMESERVER_VERSION 0
+#define GAMESERVER_VERSION	0
 //==================================================================================
 // GameServer Type
 // This variable controls gameserver type for which the project will be compiled.
@@ -26,4 +26,4 @@
 //	GameServer Common		> 0
 //  GameServer Castle Siege > 1
 //==================================================================================
-#define GAMESERVER_TYPE	0
+#define GAMESERVER_TYPE		0
