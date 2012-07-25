@@ -17,13 +17,27 @@
 //	1.00.90 > 0
 //  1.00.18 > 1
 //==================================================================================
-#define GAMESERVER_VERSION	0
-//==================================================================================
+#define GAMESERVER_VERSION			0
+//===========================================================================
 // GameServer Type
 // This variable controls gameserver type for which the project will be compiled.
 //
 // Supported Types:
 //	GameServer Common		> 0
 //  GameServer Castle Siege > 1
-//==================================================================================
-#define GAMESERVER_TYPE		0
+//=========================================================================================
+#define GAMESERVER_TYPE				0
+
+//=========================================================================================
+// GameServer Configuration Control
+// This variable controls from where server will read configuration values.
+//
+// Supported Types:
+//	Source		> 0
+//  Data		> 1
+//
+// Information:
+//	Source - This means that gameserver configuration will be read rigth from source file.
+//  Data - This means that gameserver will load configuration from data file on startup.
+//=========================================================================================
+#define GAMESERVER_CONFIG_CONTROL	0

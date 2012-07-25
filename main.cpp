@@ -14,6 +14,7 @@ extern "C" __declspec (dllexport) void __cdecl initPlugin(){
 	DWORD oldProtect;
 	if(VirtualProtect(LPVOID(0x401000),GAMESERVER_SIZE,PAGE_EXECUTE_READWRITE,&oldProtect)){
 		fixes.Init();
+		configReader.Init();
 	}
 	else{
 		if(messageBox.Show(messageBox.typeYesNo,"Plugin Init Problems","GameServer 'WzAG.dll' load error!\nDo you wan't to restart gameserver?") == messageBox.returnYes){

@@ -24,6 +24,7 @@
 	#define GAMESERVER_SERIAL_0x00000000_FIX_01		0x004069AB
 	#define GAMESERVER_SERIAL_0x00000000_FIX_02		DEFINE_DISABLED
 	#define GAMESERVER_HACK_TOOL_DISCONNECT_FIX		0x00404584
+
 	#define GAMESERVER_SIZE							3543191
 	#define GAMESERVER_OBJECT_BASE					0x7A5502C
 	#define GAMESERVER_OBJECT_SIZE					0x2228
@@ -31,6 +32,11 @@
 	#define GAMESERVER_OBJECT_MAX					0x2328
 	#define GAMESERVER_OBJECT_MAXUSER				(GAMESERVER_OBJECT_MAX-GAMESERVER_OBJECT_MIN)
 	#define GAMESERVER_OBJECT_POINTER(aIndex)		((aIndex * OBJECT_SIZE) + OBJECT_BASE)
+
+	#define GAMESERVER_GC_SERVER_MSG_STRING_SEND	0x004066B3
+	#define GAMESERVER_CLOSE_CLIENT					0x0040788D
+	#define GAMESERVER_ITEM_SERIAL_CREATE_SEND		0x00407004
+	#define GAMESERVER_DATA_SEND					0x004B3370
 
 	#pragma message (" Compile > [GameServer] Version: 1.00.90 / Type: Common")
 #endif
@@ -47,6 +53,7 @@
 	#define GAMESERVER_SERIAL_0x00000000_FIX_01		0x0040635C
 	#define GAMESERVER_SERIAL_0x00000000_FIX_02		0x0040635D
 	#define GAMESERVER_HACK_TOOL_DISCONNECT_FIX		DEFINE_DISABLED
+
 	#define GAMESERVER_SIZE							3543191		
 	#define GAMESERVER_OBJECT_BASE					0x660F078
 	#define GAMESERVER_OBJECT_SIZE					0x1968
@@ -54,8 +61,22 @@
 	#define GAMESERVER_OBJECT_MAX					0x1CE8
 	#define GAMESERVER_OBJECT_MAXUSER				(GAMESERVER_OBJECT_MAX-GAMESERVER_OBJECT_MIN)
 	#define GAMESERVER_OBJECT_POINTER(aIndex)		((aIndex * OBJECT_SIZE) + OBJECT_BASE)
-	#pragma message ("Compile : Version > 1.00.18, Type > Common")
+
+	#define GAMESERVER_GC_SERVER_MSG_STRING_SEND	0x004066E0
+	#define GAMESERVER_CLOSE_CLIENT					0x00401046
+	#define GAMESERVER_ITEM_SERIAL_CREATE_SEND		0x004036F7
+	#define GAMESERVER_DATA_SEND					0x0048BEF0
+
+	#pragma message (" Compile > [GameServer] Version: 1.00.18 / Type: Common")
 #endif
+
+#define SET_FUNC(t,f,p,n)	typedef t (*f)p; extern f n
+#define DEC_FUNC(f,n,o)		f n = (f) o
+
+SET_FUNC(void,GCServerMsgStringSend,(char* message,DWORD aIndex,BYTE type), sendPlayerMessage);
+SET_FUNC(void,CloseClient,(DWORD aIndex),PlayerDisconnect);
+SET_FUNC(void,ItemSerialCreateSend,(int aIndex, BYTE mapNumber, BYTE x, BYTE y, int type, BYTE level, BYTE dur, BYTE Op1, BYTE Op2, BYTE Op3, int lootIndex, BYTE NewOption, BYTE SetOption),playerItemSend);
+SET_FUNC(void,DataSend,(DWORD PlayerID,PBYTE Packet,DWORD Size),dataSend);
 
 #pragma region Under Development: 1.00.18 Siege, 1.00.90 Siege
 #if GAMESERVER_VERSION == 1 && GAMESERVER_TYPE == 1				// GameServer 1.00.18, Type Siege
@@ -66,6 +87,7 @@
 #endif
 #pragma endregion
 
+#pragma region Structures
 struct VIEWPORT_STRUCT{
 	char state;
 	short number;
@@ -625,3 +647,5 @@ struct OBJECTSTRUCT
  };
 
 extern OBJECTSTRUCT* gObj;
+
+#pragma endregion

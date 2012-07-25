@@ -13,7 +13,7 @@
 cfixes fixes;
 
 void cfixes::Init(){
-	if(GAMESERVER_CHECKSUM_DISABLE != DEFINE_DISABLED){
+	if(GAMESERVER_CHECKSUM_DISABLE != DEFINE_DISABLED && configReader.Configuration.gameServerChecksum == 0){
 		memoryWriter.setByte(GAMESERVER_CHECKSUM_DISABLE,0x75);
 	}
 	if(GAMESERVER_REMOVE_MDRIVE != DEFINE_DISABLED){

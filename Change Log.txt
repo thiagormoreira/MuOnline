@@ -21,7 +21,9 @@ SOURCE
  - Minjor source changes.
  - Add game object structures.
 	- Player & Item object structures
- 
+[ Version 1.4 ]
+ - Added some gameserver functions.
+
 GAMESERVER
 
 ===============================================================================================
@@ -36,4 +38,4 @@ GAMESERVER
 	- Serial 0x0000000						[1.00.18/1.00.90]					[COMMON]
 	- Hack Tool Disconnect						[1.00.18]						[COMMON]
 
-CURRENT VERSION: 2.3
+CURRENT VERSION: 2.4

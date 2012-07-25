@@ -65,4 +65,19 @@ bool configreader::fileExist(char* fileName){
 	return true;
 }
 
+void configreader::Init()
+{
+	this->fileChecker();
+
+#if GAMESERVER_CONFIG_CONTROL == 0
+
+	this->Configuration.gameServerChecksum = DISABLED;
+
+#else
+
+	this->Configuration.gameServerChecksum = this->Read("GameServer","GameServerChecksumEnabled",0,1,0,this->fileLists[1]);
+
+#endif
+}
+
 extern configreader configReader;

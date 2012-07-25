@@ -9,6 +9,9 @@
 @(#)Web:			https://github.com/KristiansJaunzems/MuOnline
 /********************************************************************************/
 
+#define	DISABLED	0
+#define ENABLED		1
+
 class configreader
 {
 private:
@@ -39,6 +42,7 @@ public:
 
 	void fileChecker();
 	bool fileExist(char* fileName);
+	void Init();
 };
 
 extern configreader configReader;

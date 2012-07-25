@@ -8,7 +8,7 @@ Functional server file are under development and will be released asap, in mean 
 
 Overall
 =======
-Current Version: 2.3
+Current Version: 2.4 
 
 Links
 =====
