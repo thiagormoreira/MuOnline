@@ -18,7 +18,9 @@ SOURCE
  - Added support for multiple gameserver versions.
 	- GameServer 1.00.90 > Season 4
 	- GameServer 1.00.18 > Season 2
- - Minjor source changes
+ - Minjor source changes.
+ - Add game object structures.
+	- Player & Item object structures
  
 GAMESERVER
 
